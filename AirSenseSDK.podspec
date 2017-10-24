@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "AirSenseSDK"
-s.version          = "0.0.1"
+s.version          = "0.0.2"
 s.summary          = "Cloud Wings AirSenseSDK."
 s.homepage         = "https://cloudwings.io/document.html"
 s.license          = {

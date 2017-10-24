@@ -1,0 +1,6 @@
+framework module AirSenseSDK {
+  umbrella header "AirSenseSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -8,7 +8,7 @@ s.license          = {
     					:text => "Cloud Wings."
                       }
 s.authors          = { "cloudwings" => "team@cloudwings.io" }
-s.source           = { :git => 'https://github.com/CloudWingsIO/AirSenseSDK-iOS', :tag => s.version, :submodules => true }
+s.source           = { :git => 'https://github.com/CloudWingsIO/AirSenseSDK-iOS.git', :tag => s.version, :submodules => true }
 
 s.platform     = :ios, '9.0'
 s.requires_arc = true

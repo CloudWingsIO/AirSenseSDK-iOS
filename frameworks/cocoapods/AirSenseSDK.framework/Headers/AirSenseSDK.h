@@ -14,10 +14,8 @@ FOUNDATION_EXPORT double AirSenseSDKVersionNumber;
 //! Project version string for AirSenseSDK.
 FOUNDATION_EXPORT const unsigned char AirSenseSDKVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <AirSenseSDK/PublicHeader.h>
-
-#import <AirSenseSDK/ASShakeManager.h>
-#import <AirSenseSDK/ASShakeViewController.h>
+#import <AirSenseSDK/ASAirSenseManager.h>
+#import <AirSenseSDK/ASAirSenseViewController.h>
 #import <AirSenseSDK/ASError.h>
 #import <AirSenseSDK/ASUserContent.h>
 #import <AirSenseSDK/ASUserContentEvent.h>

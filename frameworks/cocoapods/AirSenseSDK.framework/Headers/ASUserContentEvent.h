@@ -13,9 +13,9 @@
  */
 @interface ASUserContentEvent : ASUserContent
 
-@property(assign, nonatomic) unsigned long long eventId;
+@property(copy, nonatomic) NSString *eventId;
 @property(copy, nonatomic) NSString *url;
-@property(assign, nonatomic) float price;
+@property(copy, nonatomic) NSString *price;
 @property(copy, nonatomic) NSString *currency;
 @property(copy, nonatomic) NSString *date;
 @property(copy, nonatomic) NSString *sponsor;

@@ -10,25 +10,28 @@
 #import "ASUserContent.h"
 
 /**
- Product position of the scene.
+ Product position in the scene.
  */
-typedef struct {
-    /** 0: position not exist, 1: top-left, 2: top-right, 3: bottom-right, 4: bottom-left */
-    NSUInteger direction;
-    NSUInteger left;
-    NSUInteger top;
-} ASUserContentProductPosition;
+@interface ASUserContentProductPosition : NSObject
+
+/** 0: position not exist, 1: top-left, 2: top-right, 3: bottom-right, 4: bottom-left */
+@property (assign, nonatomic) NSUInteger direction;
+@property (assign, nonatomic) NSUInteger left;
+@property (assign, nonatomic) NSUInteger top;
+
+@end
 
 /**
  Product.
  */
 @interface ASUserContentProduct : ASUserContent
 
-@property(assign, nonatomic) unsigned long long productId;
-@property(assign, nonatomic) float price;
+@property(copy, nonatomic) NSString *productId;
+@property(copy, nonatomic) NSString *price;
 @property(copy, nonatomic) NSString *currency;
+@property(copy, nonatomic) NSString *url;
 @property(copy, nonatomic) NSString *source;
 @property(copy, nonatomic) NSString *seller;
-@property(assign, nonatomic) ASUserContentProductPosition position;
+@property(strong, nonatomic) ASUserContentProductPosition *position;
 
 @end

@@ -14,7 +14,7 @@
  */
 @interface ASUserContentScene : ASUserContent
 
-@property(assign, nonatomic) unsigned long long sceneId;
+@property(copy, nonatomic) NSString *sceneId;
 @property(copy, nonatomic) NSString *source;
 @property(assign, nonatomic) NSUInteger imageWidth;
 @property(assign, nonatomic) NSUInteger imageHeight;

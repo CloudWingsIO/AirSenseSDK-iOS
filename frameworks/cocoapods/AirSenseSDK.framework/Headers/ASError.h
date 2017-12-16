@@ -20,4 +20,5 @@
 + (instancetype)errorWithNSError:(NSError *)error;
 + (instancetype)errorWithResponse:(NSDictionary *)responseObject andDomain:(NSString *)domain;
 + (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code message:(NSString *)message readableMsg:(BOOL)readableMsg;
+
 @end

@@ -8,17 +8,42 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Error code definition.
+ */
+typedef NS_ENUM(NSInteger, ASErrorCode) {
+    /// Detection timeout
+    ASErrorCodeDetectionTimeout = 1001,
+    /// Detection error
+    ASErrorCodeDetectionError = 1002,
+    /// App locked
+    ASErrorCodeAppLocked = 1101,
+    /// AppId or appSecret invalid
+    ASErrorCodeCredentialInvalid = 1102,
+    /// Authentication error
+    ASErrorCodeAuthenticationError = 1103,
+    /// Microphone permission not granted
+    ASErrorCodeMicrophonePermissionError = 1201,
+    /// Failed to setup audio session
+    ASErrorCodeAudioSessionSetupFailure = 1202,
+    /// Network error
+    ASErrorCodeNetworkError = 9901,
+    /// Server error: backend error description
+    ASErrorCodeServerError = 9902,
+    /// System error: System error description
+    ASErrorCodeSystemError = 9903,
+    /// Unknown error
+    ASErrorCodeUnknownError = 9999,
+};
+
+/**
+ * ASError defines the error which could occur in the AirSenseSDK.
+ */
 @interface ASError : NSObject
 
-@property (assign, nonatomic, readonly) NSInteger code;
-@property (copy, nonatomic, readonly) NSString *domain;
+@property (assign, nonatomic, readonly) ASErrorCode code;
 @property (copy, nonatomic, readonly) NSString *message;
-@property (assign, nonatomic, readonly, getter=isReadableMsg) BOOL readableMsg;
 
-- (instancetype)initWithDomain:(NSString *)domain code:(NSInteger)code message:(NSString *)message readableMsg:(BOOL)readableMsg;
-
-+ (instancetype)errorWithNSError:(NSError *)error;
-+ (instancetype)errorWithResponse:(NSDictionary *)responseObject andDomain:(NSString *)domain;
-+ (instancetype)errorWithDomain:(NSString *)domain code:(NSInteger)code message:(NSString *)message readableMsg:(BOOL)readableMsg;
++ (instancetype)errorWithCode:(ASErrorCode)code message:(NSString *)message;
 
 @end

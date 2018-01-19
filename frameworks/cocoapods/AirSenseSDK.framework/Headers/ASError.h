@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, ASErrorCode) {
     ASErrorCodeCredentialInvalid = 1102,
     /// Authentication error
     ASErrorCodeAuthenticationError = 1103,
+    /// App not registered
+    ASErrorCodeAppNotRegisteredError = 1104,
     /// Microphone permission not granted
     ASErrorCodeMicrophonePermissionError = 1201,
     /// Failed to setup audio session

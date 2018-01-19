@@ -15,7 +15,6 @@ FOUNDATION_EXPORT double AirSenseSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char AirSenseSDKVersionString[];
 
 #import <AirSenseSDK/ASAirSenseManager.h>
-#import <AirSenseSDK/ASAirSenseViewController.h>
 #import <AirSenseSDK/ASError.h>
 #import <AirSenseSDK/ASUserContent.h>
 #import <AirSenseSDK/ASUserContentEvent.h>

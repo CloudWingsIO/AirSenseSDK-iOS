@@ -11,11 +11,11 @@
 /**
  User content type.
  */
-typedef enum : NSUInteger {
+typedef NS_ENUM(NSInteger, ASUserContentType) {
     ASUserContentTypeScene = 1,
     ASUserContentTypeProduct = 2,
     ASUserContentTypeEvent = 3
-} ASUserContentType;
+};
 
 /**
  User content.
